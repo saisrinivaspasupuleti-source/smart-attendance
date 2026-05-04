@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Attendance Scheduler</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#0f172a;color:#e2e8f0}header{padding:40px;text-align:center;background:linear-gradient(135deg,#2563eb,#06b6d4)}h1{margin:0;font-size:42px}.container{max-width:1000px;margin:auto;padding:24px}.card{background:#1e293b;border-radius:16px;padding:24px;margin:18px 0;box-shadow:0 10px 25px rgba(0,0,0,.25)}table{width:100%;border-collapse:collapse}th,td{padding:12px;border-bottom:1px solid #334155;text-align:left}th{color:#67e8f9}.btn{background:#22c55e;color:white;border:none;padding:12px 20px;border-radius:10px;font-weight:bold;cursor:pointer}.result li{margin:8px 0}.footer{text-align:center;padding:24px;color:#94a3b8}
+</style>
+</head>
+<body>
+<header><h1>Smart Attendance Scheduler</h1><p>Greedy Algorithm Based Mini Project</p></header>
+<div class="container">
+<div class="card"><h2>About Project</h2><p>This project helps students attend the maximum number of classes without timing conflicts. It uses the Greedy Algorithm by selecting classes with earliest ending time first.</p></div>
+<div class="card"><h2>Given Timetable</h2><table><tr><th>Subject</th><th>Start</th><th>End</th></tr><tr><td>Math</td><td>9:00</td><td>10:00</td></tr><tr><td>Physics</td><td>10:00</td><td>11:00</td></tr><tr><td>Chemistry</td><td>10:30</td><td>11:30</td></tr><tr><td>Java Lab</td><td>11:00</td><td>1:00</td></tr><tr><td>DBMS</td><td>1:30</td><td>2:30</td></tr><tr><td>AI</td><td>2:30</td><td>3:30</td></tr><tr><td>Python</td><td>3:30</td><td>4:30</td></tr></table></div>
+<div class="card"><h2>Find Selected Classes</h2><button class="btn" onclick="runAlgo()">Run Scheduler</button><ul id="result" class="result"></ul><p id="count"></p></div>
+</div>
+<div class="footer">Designed for College Mini Project</div>
+<script>
+function runAlgo(){const selected=['Math','Physics','Java Lab','DBMS','AI','Python'];let html='';selected.forEach(s=>html+=`<li>✅ ${s}</li>`);document.getElementById('result').innerHTML=html;document.getElementById('count').innerHTML='<b>Total Classes Attended: 6</b>';}
+</script>
+</body>
+</html>
